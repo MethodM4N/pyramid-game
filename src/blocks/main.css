@@ -41,3 +41,12 @@ body {
   top: 30px;
   right: 30px;
 }
+
+#score_max {
+  position: absolute;
+  color: #ceb73c;
+  font-size: 3em;
+  font-weight: bold;
+  bottom: 30px;
+  left: 30px;
+}

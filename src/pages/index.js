@@ -26,6 +26,7 @@ let robotPrecision;
 
 // получаем доступ на странице к разделам с очками, правилами и результатами
 const scoreElement = document.getElementById("score");
+const maxScoreElement = document.getElementById("score_max");
 const instructionsElement = document.getElementById("instructions");
 const resultsElement = document.getElementById("results");
 
@@ -340,6 +341,9 @@ function splitBlockAndAddNextOneIfOverlaps() {
 
     // если идёт подсчёт очков — выводим текущее значение
     if (scoreElement) scoreElement.innerText = stack.length - 1;
+    if (scoreElement.innerText > maxScoreElement.innerText) {
+      maxScoreElement.innerText = scoreElement.innerText;
+    }
     // добавляем в сцену новый блок
     addLayer(nextX, nextZ, newWidth, newDepth, nextDirection);
     // если свеса нет и игрок полностью промахнулся мимо пирамиды
