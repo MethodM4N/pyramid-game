@@ -341,7 +341,7 @@ function splitBlockAndAddNextOneIfOverlaps() {
 
     // если идёт подсчёт очков — выводим текущее значение
     if (scoreElement) scoreElement.innerText = stack.length - 1;
-    if (scoreElement.innerText > maxScoreElement.innerText) {
+    if (Number(scoreElement.innerText) > Number(maxScoreElement.innerText)) {
       maxScoreElement.innerText = scoreElement.innerText;
     }
     // добавляем в сцену новый блок
